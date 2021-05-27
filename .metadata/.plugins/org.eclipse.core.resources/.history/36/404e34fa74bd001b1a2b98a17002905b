@@ -1,0 +1,50 @@
+package classes_and_objects;
+
+public class Fraction {
+	private int numerator;
+	private int denominator;
+	
+	
+	public Fraction(int numerator,int denominator) {
+		this.numerator = numerator;
+		if(this.denominator == 0) {
+			//TODO error out
+			return;
+		}
+		this.denominator = denominator;
+		simplify();
+	}
+	
+	
+	public void getNumerator(int n) {
+		this.numerator = n;
+		simplify();
+	}
+	public void getDenominator(int d) {
+		if(this.denominator == 0) {
+			//TODO error out
+		}
+		this.denominator = d;
+		simplify();
+	}
+	
+	private void simplify() {
+		int gcd = 1;
+		int smallerOfNrandDr = Math.min(numerator, denominator);
+		for(int i=2;i<=smallerOfNrandDr;i++) {
+			if(numerator % i == 0 && denominator % i == 0) {
+				gcd = i;
+			}
+		}
+		numerator /= gcd;
+		denominator /= gcd;
+	}
+	public void print() {
+		if(denominator == 1) {
+			System.out.println(numerator);
+		}
+		else {
+			System.out.println(numerator + "/" + denominator);
+		}
+	}
+}

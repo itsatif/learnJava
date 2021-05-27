@@ -1,0 +1,20 @@
+import java.util.*;
+public class HyperBit {
+
+	public static void main(String[] args) throws Exception {
+		// TODO Auto-generated method stub
+
+
+		Scanner scn = new Scanner(System.in);
+		int n = scn.nextInt();
+		int count = 0;
+		while(count<n) {
+			n = n/10;
+			count++;
+		}
+		System.out.print(count);
+	}
+	
+}
+
+

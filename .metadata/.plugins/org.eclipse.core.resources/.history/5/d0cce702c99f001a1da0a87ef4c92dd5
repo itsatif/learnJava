@@ -1,0 +1,27 @@
+import java.util.*;
+public class HyperBit {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+
+		Scanner scn = new Scanner(System.in);
+		int n = scn.nextInt();
+		int count = 0;
+		int temp = n;
+		while(count<temp) {
+			temp = temp/10;
+			count++;
+		}
+		int val = 0;
+	    for(int i =0;i<count;i++) {
+	    	n = n % 10;
+	    	n = n / 10;
+	    	n = val;
+	    }
+		System.out.print(val);
+	}
+	
+}
+
+

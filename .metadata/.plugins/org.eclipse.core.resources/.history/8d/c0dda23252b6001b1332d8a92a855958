@@ -1,0 +1,14 @@
+package beg;
+
+public class practice {
+	
+
+
+
+public static void main(String[] args) {
+	System.out.println(111001%2);
+	System.out.println(111001/10);
+	
+}
+
+}

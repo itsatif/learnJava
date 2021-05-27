@@ -1,0 +1,19 @@
+package classes_and_objects;
+
+public class Fractionuse {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Fraction f1 = new Fraction(20,50);
+		f1.print();
+		Fraction f2 = new Fraction(30,65);
+		f2.add(f1);
+		f2.print();
+		f1.setNumerator(97);
+		f1.getDenominator();
+		f1.print();
+		
+
+	}
+
+}

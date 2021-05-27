@@ -1,0 +1,35 @@
+package beg;
+import java.util.*;
+public class practice {
+	
+
+
+
+public static void main(String[] args) {
+	System.out.println(111001%10);
+	System.out.println(111001/2);
+	Scanner scn = new Scanner(System.in);
+    int n = scn.nextInt();
+    int b = scn.nextInt();
+    int d = getValueIndecimal(n, b);
+    System.out.println(d);
+	
+}
+
+
+
+public static int getValueIndecimal(int n, int b){
+   
+    int p = 1;
+    int ans = 0;
+    while(n>0){
+        int rem = n % 10;
+        System.out.println(rem);
+        n /= 10;
+        System.out.println(n);
+        ans += rem*p;
+        p *= b;
+    }
+    return ans;
+ }
+}

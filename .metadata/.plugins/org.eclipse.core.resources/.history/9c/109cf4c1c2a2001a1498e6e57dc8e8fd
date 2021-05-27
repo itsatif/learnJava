@@ -1,0 +1,29 @@
+import java.util.*;
+public class HyperBit {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+
+		Scanner scn = new Scanner(System.in);
+		int n = scn.nextInt();
+		int[] arr = new int[n];
+		for(int i =0;i<n;i++) {
+			arr[i] = scn.nextInt();
+		}
+		revArr(arr,n);
+		
+	}
+	
+	public static void revArr(int[] a,int n) {
+		if(n==a.length) {
+			return;
+		}
+		revArr(a,n-1);
+		System.out.print(a[n]+" ");
+		
+	}
+
+}
+
+

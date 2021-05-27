@@ -1,0 +1,30 @@
+package classes_and_objects;
+
+public class Student {
+	String name;
+	public int age;
+	private int rollnum;
+	
+	public Student() {
+		
+	}
+	
+	public void print() {
+		System.out.println(name  + " " + rollnum );
+	}
+	
+	public Student(String n, int rn) {
+		name = n;
+		rollnum = rn;
+	}
+	
+	public void setRollNum(int rn) {
+		if(rn <= 0) {
+			return;
+		}		
+		rollnum = rn;
+	}
+	public int getRollNum() {
+		return rollnum; 
+	}
+}

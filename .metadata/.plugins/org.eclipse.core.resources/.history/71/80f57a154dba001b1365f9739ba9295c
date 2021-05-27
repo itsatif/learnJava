@@ -1,0 +1,50 @@
+package beg;
+import java.util.*;
+public class TwoDsum {
+	
+	public static void rowSum(int[][] a){
+		for(int i=0;i<a.length;i++) {
+			  int rowsum = 0;
+			for(int j=0;j<a[0].length;j++) {
+				rowsum += a[j][i];
+			}
+			System.out.println("Sum of " + i + " row is : " + rowsum);
+		}
+	}
+	
+	public static void colSum(int[][] a) {
+		for(int j=0;j<a[0].length;j++) {
+			int colsum = 0;
+			for(int i=0;i<a.length;i++) {
+				colsum += a[i][j];
+			}
+			System.out.println("Sum of " + j + " column is : " + colsum);
+		}
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the row size ");
+		int rowSize  = sc.nextInt();
+		System.out.println("Enter the column size ");
+		int colSize = sc.nextInt();
+		// defining 2d Array
+		int[][] arr = new int[rowSize][colSize];
+		for(int i=0;i<rowSize;i++){
+			for(int j=0;j<colSize;j++) {
+				System.out.println("Enter the element in row " + i + " and column " + j);
+				arr[i][j] = sc.nextInt();
+			}
+		}
+		for(int i=0;i<rowSize;i++) {
+			for(int j =0;j<colSize;j++) {
+		        System.out.print(arr[i][j] + "\t");
+		        }
+			System.out.println();
+		}
+		rowSum(arr);
+		colSum(arr);
+	}
+
+}

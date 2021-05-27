@@ -1,0 +1,19 @@
+package Hacker;
+import java.util.*;
+
+public class FourFunction {
+
+	public static void main(String[] args) {
+	   int ans = A(36,12);
+	   System.out.println(ans);
+
+	}
+	
+	public static int A(int n,int n1) {
+		if(n==0) {
+			return n1;
+		}
+		return A(n1%n,n);
+	}
+
+}
